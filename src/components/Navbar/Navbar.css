@@ -1,0 +1,93 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background: linear-gradient(45deg, #14597c 0%, #212529 50%);
+    background-color: transparent;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: white;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: left;
+    gap: 10px;
+    padding-left: 65px;
+}
+
+.nav-logo img {
+    width: 200px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 400px;
+    list-style: none;
+    gap: 50px;
+    color: #000;
+    font-size: large;
+    font-weight: 530;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    cursor: pointer;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.navbar.scrolled .nav-link {
+    color: #bdb7b7; /* Change link color when navbar is scrolled */
+}
+
+.nav-link:hover, 
+.nav-link:focus {
+    text-decoration: underline;
+    color: #ccc;
+}
+
+.navbar.scrolled .nav-link:hover, 
+.navbar.scrolled .nav-link:focus {
+    color: #555; /* Change hover color when navbar is scrolled */
+}
+
+.nav-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    width: 120px;
+    padding-right: 75px;
+}
+
+.nav-login button {
+    width: 150px;
+    height: 55px;
+    outline: none;
+    border: 1px solid #7a7a7a;
+    border-radius: 75px;
+    color: #515151;
+    font-size: 13px;
+    font-weight: 600;
+    background: white;
+    cursor: pointer;
+}
+
+.nav-login button:hover, 
+.nav-login button:focus {
+    text-decoration: underline;
+    color: #030303;
+}

@@ -1,0 +1,133 @@
+.Firstbody-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px black;
+    background: linear-gradient(45deg, #14597c 0%, #212529 50%);
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+}
+
+.Firstbody-left {
+    color: aliceblue;
+    padding-left: 62px;
+    gap: 5px;
+}
+
+.Firstbody-textone {
+    font-size: 40px;
+}
+
+.Firstbody-texttwo {
+    font-size: 20px;
+}
+
+.Firstbody-login {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 330px;
+    padding-right: 75px;
+}
+
+.Firstbody-login button {
+    width: 330px;
+    height: 55px;
+    outline: none;
+    border: 1px solid #7a7a7a;
+    border-radius: 75px;
+    color: #f0eaea;
+    font-size: 13px;
+    font-weight: 600;
+    background: linear-gradient(to right, #145779 0%, #2384b4 25%, #25292e 50%, #b8aeae 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition: background-position 0.5s ease, color 0.5s ease;
+    cursor: pointer;
+}
+
+.Firstbody-login button:hover,
+.Firstbody-login button:focus {
+    background-position: right bottom;
+    text-decoration: underline;
+    color: #000; /* Change text color on hover/focus */
+    visibility: visible;
+    animation-delay: 700ms;
+    animation-name: fadeInUp;
+}
+
+.Firstbody-logo {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Firstbody-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.wave-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/* Shrinking for mobile */
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+    .content {
+        height: 30vh;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
